@@ -59,7 +59,7 @@ setup(
   console=['browser.py','ceftt.py','server.py'],
   options={
     "py2exe": {
-       "dll_excludes":['dhcpcsvc.dll', 'IPHLPAPI.dll', 'NSI.dll', 'OLEACC.dll', 'USERENV.dll', 'USP10.dll','WINHTTP.dll','WININET.dll','WINNSI.dll','WTSAPI32.dll',],
+       "dll_excludes":['dhcpcsvc.dll', 'IPHLPAPI.dll', 'NSI.dll', 'OLEACC.dll', 'USERENV.dll', 'USP10.dll','WINHTTP.dll','WININET.dll','WINNSI.dll','WTSAPI32.dll'],
        "packages":['jinja2'],
        "includes": ['eventlet.queue','engineio.async_eventlet', 'cefpython3.cefpython_py27', 'server','browser']
 	}
