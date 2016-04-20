@@ -49,9 +49,9 @@ def get_data_files():
     ('locales', ['%s/locales/en-US.pak' % cefp]),
   ]
   data_files = cefdeps + find_data_files(os.getcwd(),'',[
-  'content/*','corpora/*','js/*','templates/*',
+  'content/*','corpora/*','js/*','templates/*', 'Microsoft.VC90.CRT/*',
   'american_names_by_decade_with_fitted_probability_distributions.dat',
-  'sources.txt','README.md'])
+  'sources.txt','README.md','MSVCP90.dll'])
   return data_files
 
 setup(
@@ -59,7 +59,7 @@ setup(
   console=['browser.py','ceftt.py','server.py'],
   options={
     "py2exe": {
-       "dll_excludes":['dhcpcsvc.dll', 'IPHLPAPI.dll', 'NSI.dll', 'OLEACC.dll', 'USERENV.dll', 'USP10.dll','WINHTTP.dll','WININET.dll','WINNSI.dll','WTSAPI32.dll',],
+       "dll_excludes":['dhcpcsvc.dll', 'IPHLPAPI.dll', 'NSI.dll', 'OLEACC.dll', 'USERENV.dll', 'USP10.dll','WINHTTP.dll','WININET.dll','WINNSI.dll','WTSAPI32.dll'],
        "packages":['jinja2'],
        "includes": ['eventlet.queue','engineio.async_eventlet', 'cefpython3.cefpython_py27', 'server','browser']
 	}
